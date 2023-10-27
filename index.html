@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <a href=""><img src="ASSETS/logo.png" id="logo" alt="Game Logo"></a>
+
+        <button id="startBtn">Start</button>
+
+        <img src="ASSETS/sound-icon.png" id="soundToggle" alt="Toggle Sound"> 
+        
+        <div id="avatarSelection" class="hide">
+            <img src="ASSETS/bun0.png" class="avatar" alt="Avatar bun0" data-avatar="bun0">
+            <img src="ASSETS/cat1.png" class="avatar" alt="Avatar cat1" data-avatar="cat1">
+            <img src="ASSETS/dog1.png" class="avatar" alt="Avatar dog1" data-avatar="dog1">
+            <img src="ASSETS/bun1.png" class="avatar" alt="Avatar bun1" data-avatar="bun1">
+            <img src="ASSETS/dog2.png" class="avatar" alt="Avatar dog2" data-avatar="dog2">
+            <img src="ASSETS/cat2.png" class="avatar" alt="Avatar cat2" data-avatar="cat2">
+        </div>
+
+
+<div id="avatarDisplayArea" class="hide">
+    <div id="userChoice"></div>
+    <div id="cpuChoice"></div>
+</div>
+
+
+<div id="gameChoices" class="hide">
+    <button class="gameChoice" data-choice="rock">
+        <img src="ASSETS/rock1.png" alt="rock">
+    </button>
+    <button class="gameChoice" data-choice="paper">
+        <img src="ASSETS/paper1.png" alt="paper">
+    </button>
+    <button class="gameChoice" data-choice="scissors">
+        <img src="ASSETS/scissors1.png" alt="scissors">
+    </button>
+</div>
+
+        
+        
+        <div id="gameArea" class="hide">
+            <div id="userChoice" class="choice"></div>
+            <div id="cpuChoice" class="choice"></div>
+        </div>
+
+        <div id="scoreTracker">
+            Player:  <span id="playerScore">0</span>   - CPU:  <span id="cpuScore">0</span>
+        </div>
+            
+        <button id="resetBtn" class="hide" type="submit" onClick="refreshPage()">Reset</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

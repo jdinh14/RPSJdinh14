@@ -1,0 +1,156 @@
+body {
+    background-image: url('ASSETS/background.jpg');
+    background-size: cover;
+    font-family: 'Press Start 2P', sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#logo {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 260px;
+    
+}
+
+.avatar {
+    margin: 10px;
+    cursor: pointer;
+    width: 260px;
+    height: 260px;
+    /* content: attr(data-avatar);  */
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+    content: attr(alt);  
+}
+
+
+
+.choice {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+#soundToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 45%;
+    width: 50px;
+    height: 50px;
+}
+
+.hide {
+    display: none; 
+}
+
+#scoreTracker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px; 
+    color: white;   
+    text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black;     
+    word-spacing: 0px;
+}
+
+#avatarDisplayArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* creates some space between elements */
+    
+}
+
+#userChoice {
+    order: 1; /* User is on the left */
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+}
+
+#cpuChoice {
+    order: 2; /* CPU is on the right */
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+}
+
+button {
+    font-size: 24px; 
+    background-color: white; 
+    color: black; 
+    border: 3px solid black; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-family: 'Press Start 2P', sans-serif;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+}
+
+.gameChoice {
+    background: none;
+    border: none;
+    padding: 10px;       
+    cursor: pointer;
+    margin: 5px;          
+    display: inline-block;
+    transition: transform 0.2s; 
+}
+
+.gameChoice:hover {
+    transform: scale(1.05);  
+}
+
+.gameChoice img {
+    display: block;
+    width: 260px;        
+    height: 260px;         
+}
+
+.gameChoice:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.5);
+}
+
+.gameChoice::after {
+    content: attr(data-choice); 
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.2s;
+    bottom: -30px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    white-space: nowrap; 
+}
+
+.gameChoice:hover::after {
+    opacity: 1; /* Show the tooltip on hover */
+}
+
+
